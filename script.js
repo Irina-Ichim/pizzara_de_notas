@@ -9,7 +9,16 @@ function addNote() {
         noteElement.classList.add('note');
         noteElement.textContent = noteText;
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Eliminar';
+        deleteButton.onclick = function() {
+            noteContainer.removeChild(noteElement);
+        };
+
+        noteElement.appendChild(deleteButton);
+
         noteContainer.appendChild(noteElement);
         noteInput.value = '';
     }
 }
+
