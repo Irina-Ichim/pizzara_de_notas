@@ -6,19 +6,24 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; 
 }
 
 #app {
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff;
+    color: #333333; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 h1 {
-    color: #333;
+    color: #de43ba; 
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
 textarea {
@@ -26,21 +31,14 @@ textarea {
     height: 100px;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #de43ba;
     border-radius: 5px;
-}
-
-button {
-    padding: 8px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    color: #555555;
 }
 
 button:hover {
-    background-color: #45a049;
+    filter: brightness(1.2);
 }
 
 #noteContainer {
@@ -50,25 +48,29 @@ button:hover {
 }
 
 .note {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #de43ba;
+    box-shadow: 0 0 10px #de43ba, 0 0 20px #de43ba, 0 0 30px #de43ba;
+    color: #333333; 
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.note button {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 3px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.note button:hover {
-    background-color: #c0392b;
-}
+
+
